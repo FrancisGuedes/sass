@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
+
+.button {
+  background-color: blue;
+  color: #bb86e3;
+  padding: 1px 2px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: rgba(0, 0, 255, 0.8);
+}
+
+#logo {
+  color: blue;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+}
+header nav {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  margin: 15vw;
+  padding-right: 320px;
+}
+main h1 {
+  font-size: 48px;
+}
+main h1 span {
+  color: blue;
+}
+main h1 small {
+  display: block;
+  font-size: 24px;
+  font-weight: 200;
+}
+main h1 p {
+  margin-bottom: 60px;
+}
+main h1 .button {
+  padding: 16px 16px;
+}
+
+/* @use "theme" with(
+  $color-primary: rgb(39, 77, 25),
+  $corner: 10px,
+);
+
+@use 'roundStuff'; */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+body header {
+  background-color: rgba(255, 118, 12, 0.33);
+}
+body header h1 {
+  margin: 0 15px 0 0;
+}
+body header h2 {
+  background-color: black;
+  padding: 20px;
+  color: #ff760c;
+}
+
+section {
+  background-color: #c7f7c7;
+  height: calc(100vh - 100px);
+  z-index: 0;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0px;
+  list-style: none;
+  z-index: 1;
+}
+#chat li {
+  display: flex;
+  margin-bottom: 32px;
+}
+#chat li .avatar {
+  padding: 0 16px;
+  display: flex;
+  align-items: flex-end;
+}
+#chat li .avatar img {
+  border-radius: 50%;
+  width: 48px;
+}
+#chat li .message {
+  background-color: #0b0b0a;
+  flex: 1;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  padding: 10px;
+}
+#chat li .message strong {
+  color: #393333;
+}
+#chat li .message p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+#chat li .message time {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.65;
+  color: #ff760c;
+}
+#chat li .menu {
+  display: flex;
+  align-items: center;
+}
+#chat li .menu button {
+  border: none;
+  background: none;
+  outline: none;
+}
+#chat li .menu button img {
+  height: 10px;
+  width: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+#chat li.my {
+  flex-direction: row-reverse;
+}
+#chat li.my .message {
+  background-color: #c81793;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0;
+}
+#chat li.my .message ::selection {
+  background: white;
+  color: #000;
+}
+#chat li.my strong {
+  display: none;
+}
+
+.error, .error--serious {
+  background-color: #cf0202;
+  border: 1px solid #df7878;
+  margin: 10px;
+  padding: 20px;
+}
+.error--serious {
+  border-width: 4px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper input.field {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #999;
+}
+
+.wrapper select.field {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #999;
+}
+
+.xs {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.md {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+ul:nth-child(3n+1) {
+  background-color: #0059b3;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #0080ff;
+}
+
+ul:nth-child(3n+3) {
+  background-color: #4da6ff;
+}
+
+p.f-code {
+  font-size: 20px;
+}
+p.f-code sup {
+  font-size: 12.3609394314px;
+}

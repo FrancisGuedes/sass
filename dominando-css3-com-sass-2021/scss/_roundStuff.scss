@@ -1,0 +1,10 @@
+$raid: 20px;
+
+@mixin round {
+  @warn '20px';
+  border-radius: $raid;
+}
+
+@mixin circle {
+  border-radius: 50%;
+}

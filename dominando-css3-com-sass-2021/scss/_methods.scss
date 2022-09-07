@@ -1,0 +1,10 @@
+@use 'sass:color';
+
+@function invert($color, $amount: 100%) {
+  @debug 'Value of color is: ' + $color;
+  @if $amount < 0% or $amount > 100% {
+    @error 'Invalid Amount!';
+  }
+  $inverse: color.change($color, $hue: color.hue($color) + 180);
+  @return color.mix($color, $inverse, $amount);
+}
